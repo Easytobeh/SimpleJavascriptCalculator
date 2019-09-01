@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!--This is my very first javascript application
+	a simple calculator
+	Author:Junaid Oloruntobi
+	Final date of release:1/08/2019
+	It is not so fantastic. I'm a novice
+ --> 
+<html>
+<script type="text/javascript">
+	function  performOperation() {
+    var a = Number(document.getElementById("num1").value);
+    var b = Number(document.getElementById("num2").value);
+    var operator = document.getElementById("operation").value;
+    
+    if (operator ==="+")
+    	document.getElementById("answer").value = (a+b);
+        if (operator === "-")	    
+    	document.getElementById("answer").value = (a-b);
+    if (operator === "/" )
+    	document.getElementById("answer").value = (a/b);
+    if (operator === "*" )
+    	document.getElementById("answer").value = (a*b);
+   } 
+	 
+</script>
+<head>
+	<title>MY Calculator</title>
+	<h2>Simple Calculator Application</h2> 
+</head>
+<body>
+ 		<input type="text" id="num1" placeholder="Enter number" >
+			<select id="operation" >
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="/">/</option>
+				<option value="*">×</option>	
+			</select>
+		<input type="number" id="num2" placeholder="Enter number" ><br><br>
+		
+		<input type="Button" value="Submit" onclick="performOperation()">
+	    
+	    <input type="text" id="answer" placeholder="Answer">
+</body>
+
+</html>
